@@ -1,5 +1,5 @@
 {
-  "name": "tasks-cli",
+  "name": "task-cli",
   "version": "1.0.15",
   "description": "Tasks CLI",
   "files": [
@@ -9,22 +9,22 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "tasks": "index.js"
+    "task": "index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zerodevgroup/tasks-cli.git"
+    "url": "git+https://github.com/zerodevgroup/task-cli.git"
   },
   "keywords": [
-    "tasks-cli",
+    "task-cli",
     "cli"
   ],
   "author": "zerodevgroup",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zerodevgroup/tasks-cli/issues"
+    "url": "https://github.com/zerodevgroup/task-cli/issues"
   },
-  "homepage": "https://github.com/zerodevgroup/tasks-cli#readme",
+  "homepage": "https://github.com/zerodevgroup/task-cli#readme",
   "dependencies": {
     "commander": "latest",
     "cross-spawn": "latest",

@@ -4,6 +4,7 @@ const program = require('commander')
 const R = require('ramda')
 const shell = require('shelljs')
 const fs = require('fs')
+const _ = require('lodash')
 const Task = require('./lib/task.js')
 
 program
@@ -31,11 +32,20 @@ program
   })
 
 program
-  .command('progress')
-  .description('Mark a task in progress.')
+  .command('start')
+  .description('Mark a task as started.')
   .action((taskIndex) => {
     const task = new Task()
-    task.progress(taskIndex)
+    task.start(taskIndex)
+  })
+
+program
+  .command('add')
+  .description('Add a task.')
+  .action((...text) => {
+    text.splice(-1,1)
+    const task = new Task()
+    task.add(text.join(' '))
   })
 
 program
