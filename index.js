@@ -16,6 +16,14 @@ program
   })
 
 program
+  .command('ls')
+  .description('List Tasks.')
+  .action(() => {
+    const task = new Task()
+    task.list()
+  })
+
+program
   .command('done')
   .description('Mark a task done.')
   .action((taskIndex) => {
@@ -50,6 +58,14 @@ program
 
 program
   .command('remove')
+  .description('Remove a task.')
+  .action((taskIndex) => {
+    const task = new Task()
+    task.remove(taskIndex)
+  })
+
+program
+  .command('rm')
   .description('Remove a task.')
   .action((taskIndex) => {
     const task = new Task()
